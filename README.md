@@ -15,23 +15,26 @@ Saya menguji *endpoint* utama yang didefinisikan dalam dokumentasi API [Restful 
 Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 
 1. Skenario positif
-* **Autentikasi:** Membuat token otentikasi.
+* **Autentikasi (POST):** Membuat token otentikasi.
 * **Create Booking (POST):** Memastikan reservasi dapat dibuat dengan data yang valid.
-* **Get Booking (GET):** Mengambil detail reservasi berdasarkan ID.
+* **Get Booking (GET):** Mengambil detail reservasi berdasarkan List maupun ID.
 * **Update Booking (PUT/PATCH):** Mengubah detail reservasi yang sudah ada.
 * **Delete Booking (DELETE):** Menghapus reservasi.
 * **Validasi Skema:** Memeriksa struktur JSON respons.
 * **Validasi Status Kode:** Memastikan *status code* HTTP yang benar dikembalikan (e.g., 200 OK, 201 Created).
 
 
+
+
 2. Skenario Negatif
 * **Payload Tidak Lengkap (POST):** Memastikan API menolak permintaan untuk membuat booking baru (POST) jika payload yang dikirim kehilangan field mandatory.
+* **Tanpa Token Otentikasi (DELETE):** Memastikan bahwa API menolak permintaan untuk menghapus booking (DELETE) tanpa Token.
 
 ## 🛠️ Teknologi dan Dependensi
 
 | Kategori | Teknologi | Deskripsi |
 | :--- | :--- | :--- |
-| **Bahasa Pemrograman** | **[Sebutkan Bahasa]** (e.g., Python, Java) | Bahasa utama untuk pengembangan skrip pengujian. |
+| **Bahasa Pemrograman** | **Python** | Bahasa utama untuk pengembangan skrip pengujian. |
 | **Framework Pengujian** | **[Sebutkan Framework]** (e.g., Pytest, Rest Assured, TestNG) | Digunakan untuk struktur, eksekusi, dan *assertion* pengujian. |
 | **Library HTTP** | **[Sebutkan Library]** (e.g., Requests, Rest Assured) | Library khusus untuk mengirim permintaan HTTP. |
 | **Data/Config** | **[Sebutkan Format Data]** (e.g., JSON, YAML, Excel) | Format yang digunakan untuk mengelola data pengujian (Test Data Management). |
