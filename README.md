@@ -2,7 +2,7 @@
 
 [![Status Proyek](https://img.shields.io/badge/Status-Aktif-green.svg)](https://github.com/idham099/API_Automation_Restful_Booker)
 [![API Target](https://img.shields.io/badge/API-Restful--Booker-blue)](https://restful-booker.herokuapp.com/apidoc/)
-[![Framework](https://img.shields.io/badge/Framework-SebutkanFramework-orange)](SebutkanVersi)
+[![Framework](https://img.shields.io/badge/Framework-Pytest-orange)](SebutkanVersi)
 
 ## 🎯 Tentang Proyek
 
