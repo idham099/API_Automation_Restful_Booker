@@ -32,7 +32,7 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 * **Validasi Status Kode:** Memastikan *status code* HTTP yang benar dikembalikan (e.g., 500 Internal Server Error, 403 Forbidden, 404 Not Found).
 
 
-## 🛠️ Teknologi dan Dependensi
+## ⚙️ Teknologi yang Digunakan
 
 | Kategori | Teknologi | Deskripsi |
 | :--- | :--- | :--- |
@@ -41,5 +41,23 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 | **Library HTTP** | **[Requests](https://docs.python-requests.org/en/master/)** | Library khusus untuk mengirim permintaan HTTP. |
 | **Manajemen Environment** | **`python-dotenv`**| Untuk mengelola kredensial. |
 | **Pelaporan** | **[Allure Report](https://qameta.io/allure/)** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
+
+
+## 🛠️ Instalasi dan Setup
+Ikuti langkah-langkah berikut untuk menjalankan proyek secara lokal.
+
+### 1. Kloning Repositori
+
+```bash
+git clone [https://github.com/USERNAME/NAMA_REPO_ANDA.git](https://github.com/USERNAME/NAMA_REPO_ANDA.git)
+cd NAMA_REPO_ANDA
+
+### 2. Buat Virtual Environment (Opsional, tapi Direkomendasikan)
+
+python -m venv venv
+# Aktifkan environment (Windows)
+.\venv\Scripts\activate
+# Aktifkan environment (Linux/macOS)
+source venv/bin/activate
 
 
