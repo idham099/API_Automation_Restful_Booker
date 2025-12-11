@@ -43,6 +43,7 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 | **Pelaporan** | **[Allure Report](https://qameta.io/allure/)** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
 
 
+
 ## 🚀 Cara Menjalankan Tes dan Laporan
 Ikuti langkah-langkah berikut untuk menjalankan proyek secara lokal.
 
