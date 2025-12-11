@@ -7,7 +7,7 @@
 ## 🎯 Tentang Proyek
 
 Proyek ini adalah **Otomatisasi Pengujian API** yang ditujukan untuk menguji API *dummy* **Restful Booker**. 
-Tujuan utama dari proyek ini adalah untuk memastikan fungsionalitas dan keandalan API *booking* hotel ini secara otomatis.
+Tujuan utama dari proyek ini adalah untuk memastikan fungsionalitas dan keandalan API *booking* hotel secara otomatis.
 Saya menguji *endpoint* utama yang didefinisikan dalam dokumentasi API [Restful Booker API Documentation](https://restful-booker.herokuapp.com/apidoc/).
 
 ### Skenario Pengujian yang Dicakup
@@ -24,11 +24,13 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 * **Validasi Status Kode:** Memastikan *status code* HTTP yang benar dikembalikan (e.g., 200 OK, 201 Created).
 
 
-
-
 2. Skenario Negatif
 * **Payload Tidak Lengkap (POST):** Memastikan API menolak permintaan untuk membuat booking baru (POST) tanpa field mandatory.
 * **Tanpa Token Otentikasi (DELETE):** Memastikan bahwa API menolak permintaan untuk menghapus booking (DELETE) tanpa Token.
+* **Tanpa Token Otentikasi (GET):** Menguji Integritas Data dan Penanganan Resource yang Hilang.
+* **Validasi Skema:** Memeriksa struktur JSON respons.
+* **Validasi Status Kode:** Memastikan *status code* HTTP yang benar dikembalikan (e.g., 500 Internal Server Error, 403 Forbidden, 404 Not Found).
+
 
 ## 🛠️ Teknologi dan Dependensi
 
