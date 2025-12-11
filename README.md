@@ -37,10 +37,12 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 | Kategori | Teknologi | Deskripsi |
 | :--- | :--- | :--- |
 | **Bahasa Pemrograman** | **Python** | Bahasa utama untuk pengembangan skrip pengujian. |
-| **Framework Pengujian** | **[Sebutkan Framework]** (e.g., Pytest, Rest Assured, TestNG) | Digunakan untuk struktur, eksekusi, dan *assertion* pengujian. |
-| **Library HTTP** | **[Sebutkan Library]** (e.g., Requests, Rest Assured) | Library khusus untuk mengirim permintaan HTTP. |
+| **Framework Pengujian** | **Pytest**| Digunakan untuk struktur, eksekusi, dan *assertion* pengujian. |
+| **Library HTTP** | **Requests** | Library khusus untuk mengirim permintaan HTTP. |
 | **Data/Config** | **[Sebutkan Format Data]** (e.g., JSON, YAML, Excel) | Format yang digunakan untuk mengelola data pengujian (Test Data Management). |
-| **Pelaporan** | **[Sebutkan Alat Pelaporan]** (e.g., Allure, Extent Report) | Alat untuk menghasilkan laporan pengujian visual yang detail. |
+| **Pelaporan** | **Allure** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
+
+
 
 ## ⚙️ Persyaratan Sistem
 
