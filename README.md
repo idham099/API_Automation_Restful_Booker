@@ -63,4 +63,15 @@ python -m venv venv
 source venv/bin/activate
 ```
 
+### 3. Instal Dependencies
+```
+pip install -r requirements.txt
+```
 
+### 4. Setup File Environment (.env)
+```
+# .env file
+BASE_URL=[https://restful-booker.herokuapp.com](https://restful-booker.herokuapp.com)
+BOOKER_USERNAME=admin
+BOOKER_PASSWORD=password123
+```
