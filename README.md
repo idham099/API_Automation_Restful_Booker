@@ -43,21 +43,3 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 | **Pelaporan** | **Allure** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
 
 
-
-## ⚙️ Persyaratan Sistem
-
-Pastikan Anda memiliki hal-hal berikut terinstal di mesin Anda:
-
-* **[Nama Bahasa] Runtime:** Versi **[Sebutkan Versi]** atau lebih tinggi.
-* **[Nama Alat Manajemen Paket]** (e.g., `pip` atau `Maven`/`Gradle`).
-* Git.
-
-## 🚀 Instalasi dan Setup Lokal
-
-Ikuti langkah-langkah di bawah ini untuk memulai.
-
-### 1. Kloning Repositori
-
-```bash
-git clone [https://github.com/idham099/API_Automation_Restful_Booker.git](https://github.com/idham099/API_Automation_Restful_Booker.git)
-cd API_Automation_Restful_Booker
