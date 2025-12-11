@@ -64,3 +64,9 @@ allure serve allure-results
 ```
 
 
+## 🔗 Fixture Chaining
+Proyek ini sangat bergantung pada Fixture Chaining (misalnya, created_booking_id menggunakan auth_token dan create_booking_payload). Ini memastikan setiap tes CRUD memiliki data yang unik, fresh, dan terotentikasi untuk dijalankan, meningkatkan stabilitas dan isolasi tes.
+
+##
+Dibuat dengan 😭 oleh idham099.
+
