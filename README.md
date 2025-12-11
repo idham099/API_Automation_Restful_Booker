@@ -43,35 +43,23 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 | **Pelaporan** | **[Allure Report](https://qameta.io/allure/)** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
 
 
-## 🛠️ Instalasi dan Setup
+## 🚀 Cara Menjalankan Tes dan Laporan
 Ikuti langkah-langkah berikut untuk menjalankan proyek secara lokal.
 
-### 1. Kloning Repositori
-
-```bash
-git clone [https://github.com/USERNAME/NAMA_REPO_ANDA.git](https://github.com/USERNAME/NAMA_REPO_ANDA.git)
-cd NAMA_REPO_ANDA
-
+### 1. Eksekusi Tes
+Jalankan script dari Terminal/Command Prompt di root folder proyek:
+```
+.\run_api_report.bat
 ```
 
-### 2. Buat Virtual Environment (Opsional, tapi Direkomendasikan)
+### 2. Melihat Laporan
+Setelah tes selesai (Langkah [2/3] dalam script), laporan HTML interaktif akan dibuat di folder allure-report/.
+
+**Jika laporan tidak otomatis terbuka (Langkah [3/3] gagal):**
+
+Jalankan perintah berikut di Terminal Anda untuk meluncurkan server laporan:
 ```
-python -m venv venv
-# Aktifkan environment (Windows)
-.\venv\Scripts\activate
-# Aktifkan environment (Linux/macOS)
-source venv/bin/activate
+allure serve allure-results
 ```
 
-### 3. Instal Dependencies
-```
-pip install -r requirements.txt
-```
 
-### 4. Setup File Environment (.env)
-```
-# .env file
-BASE_URL=[https://restful-booker.herokuapp.com](https://restful-booker.herokuapp.com)
-BOOKER_USERNAME=admin
-BOOKER_PASSWORD=password123
-```
