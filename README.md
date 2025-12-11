@@ -23,7 +23,9 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 * **Validasi Skema:** Memeriksa struktur JSON respons.
 * **Validasi Status Kode:** Memastikan *status code* HTTP yang benar dikembalikan (e.g., 200 OK, 201 Created).
 
+
 2. Skenario Negatif
+* **Payload Tidak Lengkap (POST):** Memastikan API menolak permintaan untuk membuat booking baru (POST) jika payload yang dikirim kehilangan field mandatory.
 
 ## 🛠️ Teknologi dan Dependensi
 
