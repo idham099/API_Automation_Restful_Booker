@@ -52,12 +52,15 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek secara lokal.
 git clone [https://github.com/USERNAME/NAMA_REPO_ANDA.git](https://github.com/USERNAME/NAMA_REPO_ANDA.git)
 cd NAMA_REPO_ANDA
 
-### 2. Buat Virtual Environment (Opsional, tapi Direkomendasikan)
+```
 
+### 2. Buat Virtual Environment (Opsional, tapi Direkomendasikan)
+```
 python -m venv venv
 # Aktifkan environment (Windows)
 .\venv\Scripts\activate
 # Aktifkan environment (Linux/macOS)
 source venv/bin/activate
+```
 
 
