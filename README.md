@@ -38,8 +38,8 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 | :--- | :--- | :--- |
 | **Bahasa Pemrograman** | **Python 3.12+** | Bahasa utama untuk pengembangan skrip pengujian. |
 | **Framework Pengujian** | **[Pytest](https://docs.pytest.org/)**| Digunakan untuk struktur, eksekusi, dan *assertion* pengujian. |
-| **Library HTTP** | **Requests** | Library khusus untuk mengirim permintaan HTTP. |
-| **Data/Config** | **[Sebutkan Format Data]** (e.g., JSON, YAML, Excel) | Format yang digunakan untuk mengelola data pengujian (Test Data Management). |
-| **Pelaporan** | **Allure** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
+| **Library HTTP** | **[Requests](https://docs.python-requests.org/en/master/)** | Library khusus untuk mengirim permintaan HTTP. |
+| **Manajemen Environment** | **`python-dotenv`**| Untuk mengelola kredensial. |
+| **Pelaporan** | **[Allure Report](https://qameta.io/allure/)** | Alat untuk menghasilkan laporan pengujian visual yang detail. |
 
 
