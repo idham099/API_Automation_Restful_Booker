@@ -27,7 +27,7 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 
 
 2. Skenario Negatif
-* **Payload Tidak Lengkap (POST):** Memastikan API menolak permintaan untuk membuat booking baru (POST) jika payload yang dikirim kehilangan field mandatory.
+* **Payload Tidak Lengkap (POST):** Memastikan API menolak permintaan untuk membuat booking baru (POST) tanpa field mandatory.
 * **Tanpa Token Otentikasi (DELETE):** Memastikan bahwa API menolak permintaan untuk menghapus booking (DELETE) tanpa Token.
 
 ## 🛠️ Teknologi dan Dependensi
