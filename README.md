@@ -14,6 +14,7 @@ Saya menguji *endpoint* utama yang didefinisikan dalam dokumentasi API [Restful 
 
 Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 
+1. Skenario positif
 * **Autentikasi:** Membuat token otentikasi.
 * **Create Booking (POST):** Memastikan reservasi dapat dibuat dengan data yang valid.
 * **Get Booking (GET):** Mengambil detail reservasi berdasarkan ID.
@@ -21,6 +22,8 @@ Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
 * **Delete Booking (DELETE):** Menghapus reservasi.
 * **Validasi Skema:** Memeriksa struktur JSON respons.
 * **Validasi Status Kode:** Memastikan *status code* HTTP yang benar dikembalikan (e.g., 200 OK, 201 Created).
+
+2. Skenario Negatif
 
 ## 🛠️ Teknologi dan Dependensi
 
