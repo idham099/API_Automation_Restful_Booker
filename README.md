@@ -10,6 +10,8 @@ Proyek ini adalah **Otomatisasi Pengujian API** yang ditujukan untuk menguji API
 Tujuan utama dari proyek ini adalah untuk memastikan fungsionalitas dan keandalan API *booking* hotel secara otomatis.
 Saya menguji *endpoint* utama yang didefinisikan dalam dokumentasi API [Restful Booker API Documentation](https://restful-booker.herokuapp.com/apidoc/).
 
+
+
 ### Skenario Pengujian yang Dicakup
 
 Pengujian otomatisasi ini mencakup skenario-skenario penting, seperti:
