@@ -1,0 +1,7 @@
+{
+  "name": "Local Execution (User: Ainul idham)",
+  "type": "local",
+  "url": "https://github.com/idham099/API_Automation_Restful_Booker.git", 
+  "buildName": "Automation Run",
+  "reportName": "Restful Booker - Pytest Allure Report" 
+}

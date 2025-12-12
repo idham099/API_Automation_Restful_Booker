@@ -1,1 +1,1 @@
-[]
+[{"values":["https://restful-booker.herokuapp.com/apidoc/index.html"],"name":"API_URL"},{"values":["Restful Booker API Automation"],"name":"Project_Name"},{"values":["Regression"],"name":"Test_Environment"},{"values":["Python 3.12+"],"name":"Base_Language"},{"values":["Pytest"],"name":"Testing_Framework"}]

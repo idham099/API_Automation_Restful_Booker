@@ -5,17 +5,26 @@ import allure
 
 
 # 1. new booking (POST)
+@allure.title("Positive : #1 Memmbuat new booking (POST)")
+@allure.tag("CRUD", "POST")
 def test_post_new_booking(base_url, api_header, create_booking_payload):
     with allure.step("1. Memmbuat new booking (POST)"):
         endpoint = f"{base_url}/booking"
+
+        #evidence sebelum
+        allure.attach(json.dumps(create_booking_payload, indent=4),  name="Request Payload", attachment_type=allure.attachment_type.JSON)
+
         response = requests.post(endpoint, headers={"Content-Type": "application/json"}, json=create_booking_payload)
+
+        allure.attach(f"Status Code: {response.status_code}\nHeaders: {response.headers}", name="Response Metadata", attachment_type=allure.attachment_type.TEXT)
+        allure.attach( response.text, name="Response Body (Success)", attachment_type=allure.attachment_type.JSON)
         
         # Verifikasi status 200
         assert response.status_code == 200
         
         # Verifikasi data yang dibuat
         databook = response.json()
-        #print(databook)
+        print(databook)
         #print("=====")
         created_firstname = response.json()["booking"]["firstname"]
         assert created_firstname == "Aldi"
@@ -23,6 +32,8 @@ def test_post_new_booking(base_url, api_header, create_booking_payload):
     
 
 #2. Menampilkan list semua daftar Booking
+@allure.title("Positive : #2 Membaca Booking List (GET)")
+@allure.tag("CRUD", "GET")
 def test_get_bookingList(base_url, api_header):
     with allure.step("2. Membaca Booking List (GET)"):            
         endpoint = f"{base_url}/booking"
@@ -30,9 +41,11 @@ def test_get_bookingList(base_url, api_header):
         
         # Verifikasi Status 200 OK
         assert response.status_code == 200
+        allure.attach(f"Status Code: {response.status_code}\nHeaders: {response.headers}", name="Response Metadata", attachment_type=allure.attachment_type.TEXT)
 
         # Verifikasi Data 
         data = response.json()
+        allure.attach(json.dumps(data, indent=4), name="Booking List IDs", attachment_type=allure.attachment_type.JSON)
         #print(data)
         #print("=====")
         assert isinstance(data, list)
@@ -41,6 +54,8 @@ def test_get_bookingList(base_url, api_header):
 
 
 #3. Menampilkan daftar booking berdasarkan Id
+@allure.title("Positive : #3 Membaca Booking ID (GET)")
+@allure.tag("CRUD", "GET")
 def test_get_bookingId(base_url, api_header, created_booking_id):
     booking_id = created_booking_id 
     
@@ -50,9 +65,12 @@ def test_get_bookingId(base_url, api_header, created_booking_id):
         
         # Verifikasi Status 200 OK
         assert response.status_code == 200
+        allure.attach(f"Status Code: {response.status_code}\nHeaders: {response.headers}", name="Response Metadata", attachment_type=allure.attachment_type.TEXT)
+
 
         # Verifikasi Data 
         dataId = response.json()
+        allure.attach( json.dumps(dataId, indent=4),  name=f"Booking Data ID {booking_id} Found",  attachment_type=allure.attachment_type.JSON)
         #print(dataId) 
         #print("===")
         assert isinstance(dataId, dict)
@@ -62,11 +80,14 @@ def test_get_bookingId(base_url, api_header, created_booking_id):
 
 
 #4. Menampilkan daftar ping - healthcheck
+@allure.title("Positive : #4 Membaca daftar ping - healthcheck (GET)")
+@allure.tag("CRUD", "GET")
 def test_get_healthCheck(base_url, api_header):
     with allure.step(f"4. Membaca daftar ping - healthcheck (GET)"):      
         endpoint = f"{base_url}/ping"
         response = requests.get(endpoint, headers=api_header)
-        
+        allure.attach(f"Status Code: {response.status_code}\nHeaders: {response.headers}", name="Response Metadata", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(response.text, name="Response Body (Expected 'Created')", attachment_type=allure.attachment_type.TEXT)
         # Verifikasi Status 201 OK
         assert response.status_code == 201, f"Health Check Gagal. Status diterima: {response.status_code}"
 
@@ -78,13 +99,16 @@ def test_get_healthCheck(base_url, api_header):
 
 
 #5. operasi PUT/PATCH (Update)
-@allure.title("5: Update Booking Penuh (PUT)")
+@allure.title("Positive : #5 Update Booking Penuh (PUT)")
 @allure.tag("CRUD", "Update")
 def test_update_booking_success(base_url, api_header, created_booking_id, update_booking_payload):
     booking_id = created_booking_id
     
     with allure.step(f"5.1. Memperbarui Booking ID {booking_id} dengan PUT"):
         endpoint = f"{base_url}/booking/{booking_id}"
+
+        allure.attach(json.dumps(update_booking_payload, indent=4), name="Request Payload (PUT)", attachment_type=allure.attachment_type.JSON)
+
         response = requests.put(endpoint,headers=api_header,json=update_booking_payload)
 
         # Verifikasi Status 200 OK
@@ -96,17 +120,15 @@ def test_update_booking_success(base_url, api_header, created_booking_id, update
         assert updated_data["firstname"] == "Adi"
         assert updated_data["totalprice"] == 9999
         assert updated_data["additionalneeds"] == "Premium Suite & Spa"
+
+        allure.attach(json.dumps(updated_data, indent=4),  name="Updated Booking Data", attachment_type=allure.attachment_type.JSON)
         #print(updated_data)
         #print("===")
-
-        # Lampirkan respons ke laporan Allure untuk debugging
-        allure.attach(json.dumps(updated_data, indent=4),  name="Updated Booking Data", attachment_type=allure.attachment_type.JSON)
-
 
 
 
 #6. Partial Update Booking (PATCH)
-@allure.title("6: Partial Update Booking (PATCH)")
+@allure.title("Positive : #6 Partial Update Booking (PATCH)")
 @allure.tag("CRUD", "PartialUpdate")
 def test_partial_update_booking_success(base_url, api_header, created_booking_id, partial_update_payload):
       
@@ -137,7 +159,7 @@ def test_partial_update_booking_success(base_url, api_header, created_booking_id
 
 
 #7.  Menguji penghapusan booking. (Delete) 
-@allure.title("7: Delete Booking Sukses")
+@allure.title("Positive : #7 Delete Booking Sukses")
 @allure.tag("CRUD", "Delete")
 def test_delete_booking_success(base_url, api_header, created_booking_id):
 
@@ -162,5 +184,8 @@ def test_delete_booking_success(base_url, api_header, created_booking_id):
         # Verifikasi Status 404 Not Found
         assert get_response.status_code == 404, \
             f"Verifikasi Gagal. Booking masih ditemukan (Status: {get_response.status_code})"
+        
+        allure.attach(f"Status Code: {get_response.status_code}\nText: {get_response.text}", name="Verification GET Response (Expected 404)", attachment_type=allure.attachment_type.TEXT)
+
         assert get_response.text == "Not Found"
         

@@ -1,0 +1,4 @@
+
+[DEBUG LOGIN] Username yang digunakan: admin
+[DEBUG LOGIN] Password yang digunakan: password123
+{'bookingid': 150, 'booking': {'firstname': 'Aldi', 'lastname': 'Sembiring', 'totalprice': 1500, 'depositpaid': True, 'bookingdates': {'checkin': '2025-12-12', 'checkout': '2025-12-17'}, 'additionalneeds': 'Wi-Fi dan sarapan'}}

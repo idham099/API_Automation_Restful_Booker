@@ -1,0 +1,10 @@
+{
+    "lastname": "NegativeTest",
+    "totalprice": 500,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2025-12-20",
+        "checkout": "2025-12-25"
+    },
+    "additionalneeds": "Air Minum"
+}

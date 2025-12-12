@@ -15,6 +15,9 @@ def base_url():
 def auth_token(base_url):
     username = os.getenv("BOOKER_USERNAME")
     password = os.getenv("BOOKER_PASSWORD")
+    print(f"\n[DEBUG LOGIN] Username yang digunakan: {username}")
+    print(f"[DEBUG LOGIN] Password yang digunakan: {password}")
+    
     endpoint = f"{base_url}/auth"
     payload = {
         "username": username,

@@ -1,1 +1,1 @@
-{"reportName":"Allure Report","testRuns":[],"statistic":{"failed":0,"broken":0,"skipped":0,"passed":10,"unknown":0,"total":10},"time":{"start":1765474707086,"stop":1765474726025,"duration":18939,"minDuration":1227,"maxDuration":2658,"sumDuration":16138}}
+{"reportName":"Restful Booker - Pytest Allure Report","testRuns":[],"statistic":{"failed":0,"broken":0,"skipped":0,"passed":10,"unknown":0,"total":10},"time":{"start":1765525249843,"stop":1765525267567,"duration":17724,"minDuration":1267,"maxDuration":2511,"sumDuration":15184}}
