@@ -11,6 +11,8 @@ Tujuan utama dari proyek ini adalah untuk memastikan fungsionalitas dan keandala
 Saya menguji *endpoint* utama yang didefinisikan dalam dokumentasi API [Restful Booker API Documentation](https://restful-booker.herokuapp.com/apidoc/).
 
 
+<img width="300" height="169" alt="download-compresstools com" src="https://github.com/user-attachments/assets/bff06e62-87b9-4535-90f2-0bd19f086f1c" />
+
 
 ### Skenario Pengujian yang Dicakup
 
