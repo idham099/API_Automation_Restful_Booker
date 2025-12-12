@@ -11,7 +11,7 @@ Tujuan utama dari proyek ini adalah untuk memastikan fungsionalitas dan keandala
 Saya menguji *endpoint* utama yang didefinisikan dalam dokumentasi API [Restful Booker API Documentation](https://restful-booker.herokuapp.com/apidoc/).
 
 
-![Uploading image.png…]()
+<img width="1819" height="1460" alt="image" src="https://github.com/user-attachments/assets/603948d8-35d4-437b-b742-18d96c63f7eb" />
 
 
 
