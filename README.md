@@ -1,4 +1,4 @@
-# 📚 API Automation Project: Restful Booker
+# 📚 API Automation Framework: Restful Booker
 
 [![Status Proyek](https://img.shields.io/badge/Status-Aktif-green.svg)](https://github.com/idham099/API_Automation_Restful_Booker)
 [![API Target](https://img.shields.io/badge/API-Restful--Booker-blue)](https://restful-booker.herokuapp.com/apidoc/)
